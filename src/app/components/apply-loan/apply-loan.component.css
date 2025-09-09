@@ -1,0 +1,86 @@
+.apply-loan-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.apply-loan-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.loan-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-form label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+.loan-form input[type="text"],
+.loan-form input[type="number"],
+.loan-form select,
+.loan-form textarea,
+.loan-form input[type="file"] {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.loan-form input:focus,
+.loan-form select:focus,
+.loan-form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.loan-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .apply-loan-container {
+    padding: 20px;
+  }
+
+  .loan-form input,
+  .loan-form select,
+  .loan-form textarea {
+    font-size: 15px;
+  }
+
+  .submit-button {
+    font-size: 16px;
+  }
+}

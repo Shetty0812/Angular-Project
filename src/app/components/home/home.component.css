@@ -1,0 +1,33 @@
+.home-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .intro {
+    text-align: center;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+  }
+  
+  .intro p {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .carousel-section {
+    margin-top: 30px;
+  }
+  
+  .carousel img {
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: cover;
+  }
+  

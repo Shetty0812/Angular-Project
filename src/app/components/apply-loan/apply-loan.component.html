@@ -1,0 +1,42 @@
+<div class="apply-loan-container">
+  <h2>Apply for a Loan</h2>
+
+  <form (ngSubmit)="submitLoan()" #loanForm="ngForm" novalidate enctype="multipart/form-data" class="loan-form">
+    <div class="form-group">
+      <label for="applicantName">Applicant Name:</label>
+      <input type="text" id="applicantName" name="applicantName" [(ngModel)]="loan.applicantName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="type">Loan Type:</label>
+      <select id="type" name="type" [(ngModel)]="loan.type" required>
+        <option value="">Select type</option>
+        <option value="home">Home</option>
+        <option value="personal">Personal</option>
+        <option value="auto">Auto</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" [(ngModel)]="loan.amount" required />
+    </div>
+
+    <div class="form-group">
+      <label for="tenure">Tenure (months):</label>
+      <input type="number" id="tenure" name="tenure" [(ngModel)]="loan.tenure" required />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" [(ngModel)]="loan.description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="document">Upload Document:</label>
+      <input type="file" id="document" name="document" (change)="onFileSelected($event)" required />
+    </div>
+
+    <button type="submit" class="submit-button">Submit Loan Application</button>
+  </form>
+</div>

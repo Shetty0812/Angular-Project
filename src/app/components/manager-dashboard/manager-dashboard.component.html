@@ -1,0 +1,57 @@
+<div class="dashboard-container">
+  <!-- Top Bar -->
+  <div class="dashboard-header">
+    <h2 class="greeting">👋 Welcome, Manager</h2>
+    <div class="dashboard-actions">
+      <!-- Logout button intentionally removed -->
+    </div>
+  </div>
+
+  <!-- Section: All Loan Applications -->
+  <div class="loans-section">
+    <h3>📑 All Loan Applications</h3>
+
+    <div *ngIf="loading" class="loading-msg">🔄 Loading loan applications...</div>
+    <div *ngIf="!loading && allLoans.length === 0" class="no-loans-msg">
+      ❗ No loan applications found.
+    </div>
+
+    <table *ngIf="allLoans.length > 0" class="loan-table">
+      <thead>
+        <tr>
+          <th>Loan ID</th>
+          <th>Applicant Name</th>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Tenure</th>
+          <th>Document</th>
+          <th>Status</th>
+          <th>Submission Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let loan of allLoans">
+          <td>{{ loan.loan_id || loan.id }}</td>
+          <td>{{ loan.applicantName }}</td>
+          <td>{{ loan.type }}</td>
+          <td>{{ loan.amount | currency }}</td>
+          <td>{{ loan.tenure }}</td>
+          <td>{{ loan.document || '-' }}</td>
+          <td>
+            <span [style.color]="getStatusColor(loan.status)">
+              {{ loan.status }}
+            </span>
+          </td>
+          <td>{{ loan.submissionDate | date:'short' }}</td>
+          <td>
+            <div *ngIf="loan.status.toLowerCase() === 'pending'" class="action-buttons">
+              <button class="btn btn-success btn-sm" (click)="approveLoan(loan)">Approve</button>
+              <button class="btn btn-danger btn-sm" (click)="rejectLoan(loan)">Reject</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

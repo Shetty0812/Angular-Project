@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "id": "e57d",
+      "name": "Nikhil Shetty",
+      "email": "NS875915@GMAIL.COM",
+      "password": "Qwerty@1234"
+    }
+  ],
+  "loans": [
+    {
+      "id": "ckq7",
+      "applicantName": "Nikhil Shetty",
+      "type": "personal",
+      "amount": 1200,
+      "tenure": 2,
+      "description": "",
+      "document": "SalesData.xlsx",
+      "status": "Rejected",
+      "loan_id": "LN1757399814887",
+      "userId": "e57d",
+      "submissionDate": "2025-09-09T06:36:54.887Z"
+    },
+    {
+      "id": "izx5",
+      "applicantName": "sangabulla",
+      "type": "auto",
+      "amount": 12000,
+      "tenure": 4,
+      "description": "",
+      "document": "Products.csv",
+      "status": "Rejected",
+      "loan_id": "LN1757400778415",
+      "userId": "e57d",
+      "submissionDate": "2025-09-09T06:52:58.415Z"
+    },
+    {
+      "id": "i40t",
+      "applicantName": "Nikhil Shetty",
+      "type": "personal",
+      "amount": 20000,
+      "tenure": 20,
+      "description": "",
+      "document": "Sales.csv",
+      "status": "Approved",
+      "loan_id": "LN1757404183453",
+      "userId": "e57d",
+      "submissionDate": "2025-09-09T07:49:43.453Z"
+    }
+  ],
+  "managers": [
+    {
+      "id": "admin01",
+      "name": "Manager One",
+      "email": "manager@bank.com",
+      "password": "Manager@123"
+    }
+  ]
+}

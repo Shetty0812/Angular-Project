@@ -1,0 +1,16 @@
+<div *ngIf="loanData; else noData">
+  <h2>Review your loan application</h2>
+  <p>Type: {{ loanData.type }}</p>
+  <p>Amount: {{ loanData.amount }}</p>
+  <p>Tenure: {{ loanData.tenure }} months</p>
+  <p>Description: {{ loanData.description }}</p>
+  <!-- Add other loan details as needed -->
+
+  <button (click)="submitLoan()" [disabled]="submitting">
+    {{ submitting ? 'Submitting...' : 'Submit Loan Application' }}
+  </button>
+</div>
+
+<ng-template #noData>
+  <p>No loan application data found. Please apply for a loan first.</p>
+</ng-template>
